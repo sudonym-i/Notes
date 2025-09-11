@@ -97,6 +97,46 @@ Investing in a variety of assets to reduce risk. Poor performance in one area ca
 
 ---
 
+# Tulip Mania: The First Market Bubble
+
+## Overview
+*   **Time Period**: 17th Century (primarily 1630s, peak in 1637)
+*   **Location**: Netherlands
+*   **Asset**: Tulip bulbs (especially rare varieties)
+
+## Characteristics as a "First Bubble"
+*   **Speculative Frenzy**: People bought bulbs not for intrinsic value, but expecting to sell at higher prices.
+*   **Price Detachment**: Prices soared far beyond the actual worth of the bulbs.
+*   **Irrational Exuberance**: Widespread belief that prices would continue to rise indefinitely.
+*   **Leverage/Debt**: Individuals took out loans and invested life savings.
+*   **Futures Trading**: Contracts for un-bloomed bulbs were traded, adding to speculation.
+
+## The Rise
+*   Tulips became a luxury item and status symbol.
+*   Demand for rare varieties drove prices up.
+*   Early investors saw significant returns, attracting more participants.
+*   Prices reached exorbitant levels (e.g., some bulbs traded for more than houses).
+
+## The Crash (February 1637)
+*   **Trigger**: Unclear, but likely a combination of:
+    *   Lack of new buyers at inflated prices.
+    *   Growing realization of unsustainable prices.
+    *   A failed auction or a sudden drop in demand.
+*   **Consequences**:
+    *   Sudden and dramatic price collapse.
+    *   Widespread panic selling.
+    *   Many investors faced bankruptcy and financial ruin.
+
+## Significance
+*   **Historical Precedent**: Widely considered the first recorded speculative bubble and crash.
+*   **Lessons Learned**:
+    *   Illustrates the dangers of speculative excess.
+    *   Highlights how market psychology (greed, fear) can drive asset prices.
+    *   A cautionary tale about assets becoming detached from fundamental value.
+*   **Impact**: Though not a "stock market" in the modern sense, it set the stage for understanding future financial bubbles.
+
+---
+
 ## Helpful Links
 - [Investment Basics Video](https://www.youtube.com/watch?v=qIw-yFC-HNU)
 - [Stocks Explained Video](https://www.youtube.com/watch?v=R4h7fyAU7GA)
