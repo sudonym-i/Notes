@@ -142,3 +142,32 @@ Example for number `dn dn-1 ... d0` in base B:
 - **Bit:** Binary digit (0 or 1).
 - **Expanded Notation:** Expression of a number as a sum of digits times powers of the base.
 - **Horner’s Rule:** Algorithm for efficient base conversion.
+
+
+----
+## Negative Numbers and stuff
+
+Do assignment -> Must be handed in online AND in in person/mailbox
+
+
+### Signed fixed-length Binary Numbers
+
+- Signed magnitude - Has the negative/positive bit in the *most significant bit*
+
+When converting to a specific representation, always add the type (e.g SM for signed magnitude)
+
+46
+-
+32 + 4
+
+0 0100100 base 2, SM
+
+
+-75
+- Rem 11 --> rem 3
+64 + 8 +2 + 1
+
+1  1001011 Base 2, SM
+
+- Drawback of signed magnitude, we now have 2 zeros +0 & -0
+
