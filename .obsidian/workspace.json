@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "stock_market/Investment Basics.md",
+                "file": "linear_for_data/Subspace, Image & Kernel.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Investment Basics"
+              "title": "Subspace, Image & Kernel"
             }
           }
         ]
@@ -193,14 +193,14 @@
   },
   "active": "33f4b67ee548d801",
   "lastOpenFiles": [
+    "linear_for_data/Bryan's Notes.md",
+    "information_structures/Java - The Language.md",
+    "information_structures/Class Basics & Error Handling.md",
+    "data_science/Databases.md",
+    "stock_market/Investment Basics.md",
     "stock_market/Basics of the Stock Market.md",
     "computing_machinery/Number representation.md",
     "linear_for_data/Subspace, Image & Kernel.md",
-    "linear_for_data/Bryan's Notes.md",
-    "data_science/Databases.md",
-    "information_structures/Java - The Language.md",
-    "information_structures/Class Basics & Error Handling.md",
-    "stock_market/Investment Basics.md",
     "data_science",
     "stock_market",
     "computing_machinery/information_structures/Java_language.md",
