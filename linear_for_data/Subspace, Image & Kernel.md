@@ -99,7 +99,7 @@ A *basis* is a special set of vectors that:
 
 **Key Points:**
 - *Minimal Spanning Set:* Removing any vector destroys the spanning property.
-	- *Unique Coordinates:* Every vector can be written in one and only one way as a combination of the basis vectors. 
+	- **Unique Coordinates:** Every vector can be written in one and only one way as a combination of the basis vectors. 
 - *Acts like axes:* Just like x, y, z axes, basis vectors provide directions.
 - *Dimension:* The number of vectors in any basis = the dimension of the space.
 
