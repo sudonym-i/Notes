@@ -1,5 +1,7 @@
 {
   "cssTheme": "Primary",
   "interfaceFontFamily": "Cambria Math",
-  "textFontFamily": "Georgia"
+  "textFontFamily": "Georgia",
+  "theme": "moonstone",
+  "accentColor": "#ffd500"
 }
