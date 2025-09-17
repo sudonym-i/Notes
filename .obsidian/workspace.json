@@ -8,59 +8,21 @@
         "type": "tabs",
         "children": [
           {
-            "id": "33f4b67ee548d801",
+            "id": "2b5668b8c4e365dd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "data_science/Databases.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Databases"
-            }
-          },
-          {
-            "id": "71bcb120479665c6",
-            "type": "leaf",
-            "state": {
-              "type": "mindmap-react-view",
-              "state": {},
-              "icon": "brain-circuit",
-              "title": "Computer_representation"
-            }
-          },
-          {
-            "id": "99783106a14a5acd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "computing_machinery/Number representation.md",
+                "file": "stock_market/Investment Basics.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Number representation"
+              "title": "Investment Basics"
             }
           },
           {
-            "id": "d7c8c69a883cff45",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "machine_learning/Recurrent Neural Networks.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Recurrent Neural Networks"
-            }
-          },
-          {
-            "id": "cba24ed0f6b63e1c",
+            "id": "811ed4820e2dbf2c",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -74,7 +36,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -131,7 +93,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "27d81b4ce1b37da8",
@@ -195,23 +157,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "computing_machinery/Number representation.md",
+                "file": "linear_for_data/Subspace, Image & Kernel.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Number representation"
-            }
-          },
-          {
-            "id": "ef0f069a620e81dc",
-            "type": "leaf",
-            "state": {
-              "type": "copilot-chat-view",
-              "state": {},
-              "icon": "message-square",
-              "title": "Copilot"
+              "title": "Outline of Subspace, Image & Kernel"
             }
           },
           {
@@ -223,13 +175,23 @@
               "icon": "git-pull-request",
               "title": "Source Control"
             }
+          },
+          {
+            "id": "d4f2b472b970dd26",
+            "type": "leaf",
+            "state": {
+              "type": "copilot-chat-view",
+              "state": {},
+              "icon": "message-square",
+              "title": "Copilot"
+            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 387
+    "width": 299
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -244,21 +206,26 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "63648a7ff3fe66e4",
+  "active": "811ed4820e2dbf2c",
   "lastOpenFiles": [
-    "machine_learning/Recurrent Neural Networks.md",
-    "RNN_unrolled.png.md",
     "computing_machinery/Number representation.md",
-    "Untitled",
-    "machine_learning",
     "computing_machinery/Computer_representation.md",
-    "information_structures/Java - The Language.md",
     "linear_for_data/Subspace, Image & Kernel.md",
-    "linear_for_data/Bryan's Notes.md",
-    "data_science/Databases.md",
-    "information_structures/Class Basics & Error Handling.md",
+    "linear_for_data/Continued.md",
+    "stock_market/Visual Investing.md",
     "stock_market/Investment Basics.md",
     "stock_market/Basics of the Stock Market.md",
+    "data_science/Modelling Data.md",
+    "data_science/Databases.md",
+    "machine_learning/Convolutional Neural Networks.md",
+    "machine_learning/Recurrent Neural Networks.md",
+    "information_structures/Class Basics & Error Handling.md",
+    "machine_learning/NN fundamentals.md",
+    "Untitled",
+    "linear_for_data/Bryan's Notes.md",
+    "RNN_unrolled.png.md",
+    "machine_learning",
+    "information_structures/Java - The Language.md",
     "data_science",
     "stock_market",
     "computing_machinery/information_structures/Java_language.md",

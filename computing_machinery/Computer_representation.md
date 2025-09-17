@@ -266,12 +266,115 @@ To find the $r$'s complement of an $n$-digit number $N$ in base $r$:
 
 ## Comparison Summary
 
-| Feature | Signed Magnitude | 1's Complement | 2's Complement | $(r-1)$'s Complement | $r$'s Complement |
-| :------ | :--------------- | :------------- | :------------- | :------------------- | :-------------- |
-| **Positive Numbers** | Same as unsigned | Same as unsigned | Same as unsigned | Same as unsigned | Same as unsigned |
-| **Negative Numbers** | Sign bit + magnitude | Invert all bits of positive | Invert all bits of positive, then add 1 | Subtract each digit from $(r-1)$ | $(r-1)$'s complement + 1 |
-| **Zero Representation** | Two (`+0`, `-0`) | Two (`+0`, `-0`) | One (`0`) | Two (e.g., `000`, `(r-1)(r-1)(r-1)`) | One (`0`) |
-| **Range ($n$ digits)** | $-(r^{n-1}-1)$ to $(r^{n-1}-1)$ | $-(r^{n-1}-1)$ to $(r^{n-1}-1)$ | $-r^{n-1}$ to $(r^{n-1}-1)$ | $-(r^{n-1}-1)$ to $(r^{n-1}-1)$ | $-r^{n-1}$ to $(r^{n-1}-1)$ |
-| **Arithmetic** | Complex | Requires end-around carry | Simple (standard binary addition) | Requires end-around carry | Simple (standard addition) |
-| **Hardware Complexity** | High | Moderate | Low | Moderate | Low |
-| **Usage** | Rarely used for arithmetic | Historically, some systems; conceptually useful | **Most common in modern computers** | Conceptual generalization | **Widely used for arithmetic in arbitrary bases** |
+| Feature                 | Signed Magnitude                | 1's Complement                                  | 2's Complement                          | $(r-1)$'s Complement                 | $r$'s Complement                                  |
+| :---------------------- | :------------------------------ | :---------------------------------------------- | :-------------------------------------- | :----------------------------------- | :------------------------------------------------ |
+| **Positive Numbers**    | Same as unsigned                | Same as unsigned                                | Same as unsigned                        | Same as unsigned                     | Same as unsigned                                  |
+| **Negative Numbers**    | Sign bit + magnitude            | Invert all bits of positive                     | Invert all bits of positive, then add 1 | Subtract each digit from $(r-1)$     | $(r-1)$'s complement + 1                          |
+| **Zero Representation** | Two (`+0`, `-0`)                | Two (`+0`, `-0`)                                | One (`0`)                               | Two (e.g., `000`, `(r-1)(r-1)(r-1)`) | One (`0`)                                         |
+| **Range ($n$ digits)**  | $-(r^{n-1}-1)$ to $(r^{n-1}-1)$ | $-(r^{n-1}-1)$ to $(r^{n-1}-1)$                 | $-r^{n-1}$ to $(r^{n-1}-1)$             | $-(r^{n-1}-1)$ to $(r^{n-1}-1)$      | $-r^{n-1}$ to $(r^{n-1}-1)$                       |
+| **Arithmetic**          | Complex                         | Requires end-around carry                       | Simple (standard binary addition)       | Requires end-around carry            | Simple (standard addition)                        |
+| **Hardware Complexity** | High                            | Moderate                                        | Low                                     | Moderate                             | Low                                               |
+| **Usage**               | Rarely used for arithmetic      | Historically, some systems; conceptually useful | **Most common in modern computers**     | Conceptual generalization            | **Widely used for arithmetic in arbitrary bases** |
+
+------
+
+# Carry Error and Signed Overflow Error in Machine Language
+
+## Carry Error
+
+### Definition
+
+A carry error occurs during arithmetic operations when the result of an unsigned integer addition exceeds the maximum representable value for the given bit width.
+
+### Key Characteristics
+
+- Happens in unsigned arithmetic operations
+- Indicates that the result is too large to fit in the allocated bit space
+- Typically detected by a carry flag in the processor's status register
+
+### Example
+
+```
+8-bit unsigned addition:
+  11111111 (255 in decimal)
++        1
+  --------
+ 100000000 (Carry occurs - result exceeds 8-bit range)
+```
+
+### Representation
+
+- When a carry occurs, the carry flag (C flag) is set to 1
+- Processor can use this flag to handle multi-precision arithmetic
+
+## Signed Overflow Error
+
+### Definition
+
+A signed overflow error happens when an arithmetic operation produces a result that cannot be represented within the range of the signed integer's bit representation.
+
+### Key Characteristics
+
+- Occurs in signed integer arithmetic
+- Different from carry error in unsigned arithmetic
+- Detected by comparing the sign bits before and after the operation
+
+### Two's Complement Representation
+
+In two's complement:
+
+- Leftmost bit represents the sign (0 for positive, 1 for negative)
+- Range for 8-bit signed integer: -128 to 127
+
+### Detection Mechanism
+
+Overflow occurs when:
+
+1. Adding two positive numbers results in a negative number
+2. Adding two negative numbers results in a positive number
+
+### Example
+
+```
+8-bit signed addition:
+  01111111 (+127)
++  00000001 (+1)
+  --------
+  10000000 (Signed Overflow - result is incorrectly interpreted as -128)
+```
+
+## Comparison
+
+|Characteristic'|Carry Error'|Signed Overflow Error'|
+|---|---|---|
+|Arithmetic Type'|Unsigned|Signed|
+|Flag Indication'|Carry Flag|Overflow Flag|
+|Bit Interpretation'|Total magnitude|Sign and magnitude|
+
+## Practical Implications
+
+- Critical in low-level programming
+- Important for:
+    - Embedded systems
+    - Compiler design
+    - Security-sensitive computations
+    - Numerical computing
+
+## Prevention Strategies
+
+1. Range checking before operations
+2. Using larger integer types
+3. Implementing explicit overflow handling
+4. Using saturating arithmetic operations
+
+## Code Example (Pseudo-assembly)
+
+```
+; Check for unsigned carry
+ADD R1, R2
+BCS carry_occurred  ; Branch if Carry Set
+
+; Check for signed overflow
+ADD R1, R2
+BVS overflow_occurred  ; Branch if Overflow Set
+```
