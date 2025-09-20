@@ -82,3 +82,7 @@ For the `Order` entity:
 - `TotalAmount`
 - `ShippingAddress`
 - `Status`
+
+### Business Rules Cont.
+- *Nouns* turn into entities
+- *Verbs* turn into relationships

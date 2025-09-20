@@ -2,6 +2,6 @@
   "cssTheme": "Primary",
   "interfaceFontFamily": "Cambria Math",
   "textFontFamily": "Georgia",
-  "theme": "moonstone",
+  "theme": "system",
   "accentColor": "#ffd500"
 }
