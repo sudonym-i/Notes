@@ -171,3 +171,16 @@ When converting to a specific representation, always add the type (e.g SM for si
 
 - Drawback of signed magnitude, we now have 2 zeros +0 & -0
 
+
+
+
+Bitwise operations apply to all bits in being referred to
+
+AND
+OR
+XOR
+
+all use these operations:
+- Set ( =1 )
+- Clear ( =0 )
+- toggle (Flip bit)

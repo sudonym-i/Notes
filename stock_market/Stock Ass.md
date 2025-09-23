@@ -1,0 +1,29 @@
+1- Company
+2- Technical analysis
+- **Trend**  | high-high & low-low | suppression & resistance
+	- Trend Lines
+	- Channel Lines (smaller opening is a stronger trend)
+		- Reversal patterns 
+			- 2 top bottom
+			- 3 top bottom
+			- Head and shoulders
+		- Triangles - sign of continuation
+			- symmetrical
+			- ascending
+			- descending
+- **Entry/exit point**
+	- Indicators
+		- Lagging indicators | help confirms certain trends
+			- Simple Moving Average (sum of x days) (larger window is slower, small window moves faster)
+			- Weighted Moving Average
+				- Gives recent prices a higher weight, and older prices less weight
+			- Exponential Moving Average
+				- Changes weight more when there is more fluctuations in prices
+				- Better for volatile markets with lots of fluctuation
+				- Closer to recent prices
+			- Envelopes | Gives you a range to signal danger if market price is going beyond the range. *The fluctuations in the moving average itself.*
+			- **Bollinger band** | Shows the above and below average (shows you percentage above and below), standard deviation
+		- Oscillators | Help determine when market has reached important extremes
+			- Tells us when the market is overbought or oversold
+- Candle-Stick graph
+- Volume analysis
