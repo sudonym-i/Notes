@@ -27,3 +27,43 @@
 			- Tells us when the market is overbought or oversold
 - Candle-Stick graph
 - Volume analysis
+
+## Assignment Components (ALL REQUIRED)
+
+Collect information
+- EDGAR
+- Yahoo Finance
+- New information
+## Technical
+- Trend, lines, channels
+- Volume analysis
+- Support and resistance
+- Lagging and Oscillating indicators (Both REQUIRED)
+- MACD (Absolutely required)
+
+## Fundamental
+- To be covered
+
+## Synthesize
+
+Use both of these analyses to justify a decision, properly integrating all information into one place.  (YES/NO), (BUY/SELL)
+
+Make a prediction for the future of the company
+
+## Formatting
+
+- Should be 4,000 words +/- 10%
+- 12 point font size
+- Times new roman font
+- MUST include cover page -> including group number, group member names, and company name (Also student ID's)
+
+
+##### All of the below are EXCLUDED from word count 
+
+- Attach Financial statements to report in some way. (Separate file OR appendix (Excel spreadsheet) )
+
+- Must include table of content
+
+	- Sources MUST be on  separate page. Always cite sources.
+
+NO LATE SUBMISSIONS
