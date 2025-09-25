@@ -184,3 +184,5 @@ all use these operations:
 - Set ( =1 )
 - Clear ( =0 )
 - toggle (Flip bit)
+
+ALL BINARY NUMBERS ARE READ BACKWARDS BY COMPUTERS
