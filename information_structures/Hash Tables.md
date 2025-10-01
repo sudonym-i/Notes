@@ -34,6 +34,165 @@ return hash % table_size
 - Common primes: 31, 37, 53
 - Polynomial rolling hash
 
+### Hash Function Quality: Critical Considerations
+
+A quality hash function directly impacts hash table performance. Poor hash functions lead to clustering and collisions, degrading O(1) operations to O(n).
+
+#### Essential Requirements
+
+1. **Repeatability (Deterministic)**
+   - Given key must ALWAYS produce the same hash value
+   - If `hash("apple") = 47` once, it must always equal 47
+   - Non-negotiable requirement for correctness
+
+2. **Uniform Distribution**
+   - Hash values should spread evenly across entire range
+   - Prevents all keys from clustering in small subset of buckets
+   - Goal: Each bucket has approximately equal probability of being chosen
+
+3. **Avoid Clustering (especially for linear probing)**
+   - Keys should not hash to consecutive indices
+   - Clustering causes long probe sequences
+   - Particularly problematic with linear probing
+
+#### Hashing Primitive Values (Integers)
+
+**Simple case**: Integer keys in small range
+- If values are already distributed (e.g., random integers), use them directly as hash values
+- If values fit table size range, minimal processing needed
+
+**Problem**: Small range integers (e.g., 1 to 100)
+- Using directly causes clustering in first 100 buckets
+- **Solution**: Bit shifting or multiplication to expand range
+- Example: `hash = (key * large_prime) % table_size`
+
+#### Hashing Strings: Common Pitfalls
+
+**Bad Hash Function #1: Sum of ASCII values**
+```java
+long hash1(String str) {
+    long h = 0;
+    for (int i = 0; i < str.length(); i++) {
+        h += str.charAt(i);
+    }
+    return h;
+}
+```
+
+**Critical Problems:**
+1. **Ignores character order**
+   - "dog" and "god" produce identical hash values
+   - hash("dog") = 100 + 111 + 103 = 314
+   - hash("god") = 103 + 111 + 100 = 314
+   - Many anagrams collide!
+
+2. **Limited range for short strings**
+   - For table size 10,000, only very long strings reach higher values
+   - Short strings cluster in low indices
+   - Poor distribution
+
+**Better Hash Function #2: Positional weighting**
+```java
+long hash2(String str) {
+    long h = 0;
+    for (int i = 0; i < str.length(); i++) {
+        h = h * 31 + str.charAt(i);
+    }
+    return h;
+}
+```
+
+**Why this works:**
+- Character position matters: "dog" ≠ "god"
+  - hash("dog") = ((100 × 31 + 111) × 31) + 103
+  - hash("god") = ((103 × 31 + 111) × 31) + 100
+  - Different results!
+- Multiplier (31) spreads values across range
+- Used by Java String.hashCode()
+
+**Why 31?**
+- Prime number (reduces patterns/collisions)
+- Odd (better bit mixing)
+- Small enough for fast computation
+- Can be optimized: `31 * h = (h << 5) - h` (bit shift)
+
+#### Hashing Complex Objects
+
+**Strategy**: Combine hash values of key components
+
+**Example**: Hashing a Person object with name and age
+```java
+class Person {
+    String name;
+    int age;
+
+    public int hashCode() {
+        int result = 17;  // Start with prime
+        result = 31 * result + name.hashCode();
+        result = 31 * result + age;
+        return result;
+    }
+}
+```
+
+**Recipe:**
+1. Start with small prime (e.g., 17)
+2. For each significant field:
+   - Multiply result by prime (e.g., 31)
+   - Add field's hash value
+3. Combines values while maintaining order sensitivity
+
+#### Implementation in Java
+
+**The hashCode() method:**
+- Every Java object inherits `hashCode()` from Object class
+- Returns an `int` value (not long, despite examples above)
+- Used automatically by HashMap, HashSet, etc.
+
+**Critical Contract:**
+- If `a.equals(b)` is true, then `a.hashCode() == b.hashCode()` MUST be true
+- Converse not required: different objects can have same hash (collisions OK)
+- **Violating this breaks hash tables!**
+
+**Example violation:**
+```java
+// BROKEN CODE - DO NOT USE
+class BadPerson {
+    String name;
+
+    public boolean equals(Object o) {
+        return ((BadPerson)o).name.equals(this.name);
+    }
+
+    // hashCode() not overridden - uses Object.hashCode()
+    // Different instances with same name will have different hashes
+    // Breaks hash table lookups!
+}
+```
+
+**Correct implementation:**
+```java
+class GoodPerson {
+    String name;
+
+    public boolean equals(Object o) {
+        if (!(o instanceof GoodPerson)) return false;
+        return ((GoodPerson)o).name.equals(this.name);
+    }
+
+    public int hashCode() {
+        return name.hashCode();  // Consistent with equals
+    }
+}
+```
+
+**Modern Java shortcut:**
+```java
+public int hashCode() {
+    return Objects.hash(name, age, email);  // Java 7+
+}
+```
+
 ### The Pigeonhole Principle and Collisions
 
 **Why collisions are inevitable:**
