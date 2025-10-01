@@ -1,4 +1,4 @@
-# Linear Algebra Core Concepts (Simplified & Intuitive)
+z# Linear Algebra Core Concepts (Simplified & Intuitive)
 
 ## 1. Linear Independence
 
