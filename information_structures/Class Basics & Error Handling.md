@@ -1,4 +1,3 @@
-
 # Inheritance 
 
 **Parent and children classes**

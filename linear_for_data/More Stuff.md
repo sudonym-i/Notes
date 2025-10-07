@@ -52,3 +52,10 @@ where λᵢ are real eigenvalues and vᵢ are orthonormal eigenvectors.
 In quantum mechanics, Hermitian operators represent **observable quantities** (like position, momentum, energy) because their eigenvalues are real.
 
 
+$$proj = \sum_{i=1}^k v_i v^*_i$$
+$$\implies proj{(v_1, v_2)} = v_1 v_1^* + v_2 v_2^*$$
+
+Another way of writing this:
+$$A \in \text{Orthonormal columns} \implies A \space{} A^* = P  
+\implies   v_1 v_1^* + v_2 v_2^*$$
+	
