@@ -80,12 +80,13 @@ List four elements of a computer architecture that an assembly language programm
 ```
 Answer:
 1.
-
+registers
 2.
-
+memory addresses (the value at these points)
 3.
-
+Arithmetic units ( instructions )
 4.
+
 ```
 
 ---
@@ -186,7 +187,7 @@ Answer:
 
 Convert `187₁₀` to:
 
-**(a)** Binary **[2 marks]**
+	**(a)** Binary **[2 marks]**
 
 ```
 Work:
